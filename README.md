@@ -47,45 +47,43 @@
 
 
 
-
-
 #### 1. 本專案參考了以下前輩的方案改成製作：
 
 https://github.com/ywchiu/largitdata/blob/master/code/Course_220.ipynb
 
 #### 2. 若使用Anaconda版的Python，請創立虛擬環境（名稱自取）。
 
-conda create -n openaiEnv python=3.8
+        conda create -n openaiEnv python=3.8
 
 <div align="center">
-  <img src="demo/demo_m2.png" width="500"/>
+  <img src="demo/demo_m2.png" width="600"/>
 </div>
 
 <div align="center">
-  <img src="demo/demo_m3.png" width="500"/>
+  <img src="demo/demo_m3.png" width="600"/>
 </div>
 #### 3. 進入虛擬環境，安裝相關依賴。
 
-conda activate openaiEnv
+        conda activate openaiEnv
 
 <div align="center">
-  <img src="demo/demo_m4.png" width="500"/>
+  <img src="demo/demo_m4.png" width="600"/>
 </div>
 
-pip install -r requirements.txt
+        pip install -r requirements.txt
 
 <div align="center">
-  <img src="demo/demo_m5.png" width="500"/>
+  <img src="demo/demo_m5.png" width="600"/>
 </div>
 
 
 #### 4. 輸入以下指令，創造執行檔。
 
 
-pyinstaller --onefile chatWhisperGUI_test03.py
+        pyinstaller --onefile chatWhisperGUI_test03.py
 
 <div align="center">
-  <img src="demo/demo_m6.png" width="500"/>
+  <img src="demo/demo_m6.png" width="600"/>
 </div>
 
 
