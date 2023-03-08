@@ -97,6 +97,25 @@ https://github.com/ywchiu/largitdata/blob/master/code/Course_220.ipynb
 
 #### 6. Windows上要安裝FFmpeg才能順利跑。可以用chocolatey來安裝FFmpeg，也要設定PATH，重開機才生效。可以玩玩看。結果稍有錯字，但已很厲害。因為Whisper模型的限制，影片不能超過9-10分鐘。建議用1-2分鐘的新聞來跑跑看。
 
+#### 7. 安裝Chocolatey，請參考以下連結。
+
+https://ithelp.ithome.com.tw/articles/10242201
+
+
+#### 8. 安裝Chocolatey後，請在Powershell輸入以下指令安裝FFMpeg。
+
+        choco install ffmpeg
+
+#### 9. 安裝完必須手動增加環境變數PATH。Windows下的路徑類似如下。
+
+        C:\ProgramData\chocolatey\lib\ffmpeg\tools\bin
+
+<div align="center">
+  <img src="demo/demo_m8.png" width="600"/>
+</div>
+
+#### 10. 設定完成後請重開機才會生效。
+
 
 
 
