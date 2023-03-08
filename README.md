@@ -1,5 +1,5 @@
-# YTMockingjay
-# Youtube Speech to Text Converter 自動擷取Youtube影片的聲音，擷取出來成mp3，最後轉換成文字並加標點符號成幾乎完整的文章。
+# YTMockingjay YT學舌鳥
+# Youtube Speech to Text Converter使用OPENAI的GPT3.5 turbo和Whisper模型API，自動擷取Youtube影片的聲音，擷取出來成mp3，最後轉換成文字並加標點符號成幾乎完整的文章。
 
 
 <div align="center">
