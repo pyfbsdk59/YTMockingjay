@@ -87,6 +87,15 @@ https://github.com/ywchiu/largitdata/blob/master/code/Course_220.ipynb
 </div>
 
 
+#### 4. 執行檔在dist資料夾中，settings.csv請放在同資料夾。你的OPENAI的TOKEN請設在settings.csv的第一行，注意不要按Enter跑到第二行。
+
+<div align="center">
+  <img src="demo/demo_m7.png" width="600"/>
+</div>
+
+#### 5. 請按exe執行檔就可以開始執行。
+
+#### 6. Windows上要安裝FFmpeg才能順利跑。可以用chocolatey來安裝FFmpeg，也要設定PATH，重開機才生效。可以玩玩看。結果稍有錯字，但已很厲害。因為Whisper模型的限制，影片不能超過9-10分鐘。建議用1-2分鐘的新聞來跑跑看。
 
 
 
