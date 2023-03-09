@@ -41,17 +41,20 @@ def WhipserTranscriber(xfilename, TOKEN):
     
     return transcript_text
     
-def ChatGPTTranscriber(transcript_text, TOKEN):
+def ChatGPTTranscriber(transcript_text, TOKEN, system_prompt):
     import os
     import openai
     openai.api_key = TOKEN
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-    {"role": "system", "content": "請你成為文章的小幫手，將以下文章加上中文標點符號並且適切地斷行和分段，以繁體中文輸出"},
+    {"role": "system", "content": system_prompt},
     {"role": "user", "content": transcript_text}
     ]
     )
+    
+    #"請你成為文章的小幫手，將以下文章加上中文標點符號並且適切地斷行和分段，以繁體中文輸出"
+    
     print("以下為文章整理：")
     print(completion.choices[0].message['content'].strip())
     
@@ -109,6 +112,7 @@ class App1(tk.PanedWindow):
                 settings_list.append(row[0])
 
         TOKEN = settings_list[0]
+        system_prompt = settings_list[1] #不要斷行 要在同一行
 
 
 
@@ -129,7 +133,7 @@ class App1(tk.PanedWindow):
 
             transcript_text2 = WhipserTranscriber(xfilename, TOKEN)
 
-            ChatGPTTranscriber(transcript_text2, TOKEN)
+            ChatGPTTranscriber(transcript_text2, TOKEN, system_prompt)
 
             
             
@@ -191,7 +195,7 @@ from tkinter import *
 
 root = tk.Tk()
 root.geometry("650x500")  
-root.title("YTMockingjay逐字稿轉換程式 Beta 2")
+root.title("YTMockingjay YT2text轉換程式 Beta 3")
 root.resizable(1, 1)
 
 
@@ -208,7 +212,7 @@ frame1.pack(side='top')
 frame101 = App101(notebook) #frame1
 frame101.pack(side='top')
 
-notebook.add(frame1,text="A. YTMockingjay逐字稿轉換程式")   # 建立頁次1同時插入Frame1
+notebook.add(frame1,text="A. YTMockingjay YT2text轉換程式")   # 建立頁次1同時插入Frame1
 notebook.add(frame101,text="Z. 聯絡作者")   # 建立頁次3同時插入Frame3
 
 notebook.pack(padx=10,pady=10,fill="both",expand=True)    
